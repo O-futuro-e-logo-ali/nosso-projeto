@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    user-select: none;
+    overflow: hidden;
+    /* Variables */
+    --header-h: 140px;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #111;
+}
+
+header {
+    position: absolute;
+    height: var(--header-h);
+    width: 100%;
+    background-image: linear-gradient(-30deg, #62f, #30f);
+    padding: 0 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+header h1 {
+    font-size: 3em;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 5px 5px 1px #10a;
+}
+
+header section {
+    padding: 15px 25px;
+    border-radius: 25px;
+    box-shadow: inset -3px -3px 5px #fff8;
+}
+
+header section ul {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    list-style: none;
+}
+
+header section ul li {
+    transition: .2s;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+header section ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.3em;
+    font-weight: 600;
+}
+
+header section ul li:hover,
+header section ul li.active {
+    background-color: #30c;
+}
+
+.container {
+    position: absolute;
+    top: var(--header-h);
+    max-height: calc(100% - var(--header-h));
+    width: 100%;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    color: white;
+}
+
+.container main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    margin: 0 50px;
+}
+
+.container main section {
+    min-height: 200px/*calc(100vh - var(--header-h))*/;
+    box-shadow: inset 0 0 0 2px #fffa;
+    border-radius: 20px;
+    padding: 20px 50px;
+    padding-bottom: 50px;
+}
+
+.container main section.active {
+    background-color: #222a;
+}
+
+.container main section h1 {
+    font-size: 2.8em;
+    margin: 40px 0;
+    margin-left: 20px;
+    letter-spacing: 1px;
+}
+
+.container main section p {
+    color: #ccc;
+    font-size: 1.5em;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.container main .topics-container {
+    left: 0;
+    width: 100%;
+    background-color: #222a;
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+}
+
+.container main .topics-container .topic {
+    width: 300px;
+    background-color: #252525;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    font-size: calc(1vw * 1vh);
+    padding-bottom: 20px;
+}
+
+.container main .topics-container .topic.large {
+    font-size: .85em;
+    width: 370px;
+}
+
+.container main .topics-container .topic h2 {
+    font-size: 1.5em;
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+}
+
+.container main .topics-container .topic ion-icon {
+    font-size: 4em;
+    margin-top: 20px;
+}
+
+.container main .topics-container .topic p {
+    font-size: .9em;
+    text-align: center;
+    max-width: 90%;
+    color: #ccc;
+}
+
+.container footer {
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-bottom: 30px;
+}
+
+.container footer div[class*="container"] {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container footer div h1 {
+    letter-spacing: 2px;
+}
+
+.container footer div .instagram {
+    height: 80px;
+    width: 80px;
+    border-radius: 15px;
+    background-color: #222a;
+    transition: .3s;
+    /* overflow: initial; */
+}
+
+.container footer div .instagram:hover {
+    width: 400px;
+}
+
+.container footer div div .inline {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 80px;
+    width: 400px;
+    transition: .3s;
+    background-color: #222a;
+}
+
+.container footer div .instagram:hover .inline {
+    background-color: #f0a;
+}
+
+.container footer div div .inline ion-icon {
+    height: 80px;
+    width: 80px;
+    transform: scale(.75);
+}
+
+.container footer div div .inline a {
+    height: 80px;
+    width: 320px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #151515;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-size: 1.7em;
+    border-radius: 0;
+    transition: .3s;
+}
+
+.container footer div .instagram:hover .inline a {
+    box-shadow: inset 0 0 0 2px #f0a;
+    border-radius: 15px;
+}
